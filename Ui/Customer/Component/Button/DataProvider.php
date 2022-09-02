@@ -1,18 +1,14 @@
 <?php
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
 declare(strict_types=1);
 
-namespace Magento\LoginAsCustomerAdminUi\Ui\Customer\Component\Button;
+namespace Shch\Lasc\Ui\Customer\Component\Button;
 
+use Exception;
 use Magento\Framework\Escaper;
 use Magento\Framework\UrlInterface;
 
 /**
  * Get data for Login as Customer button.
- *
  * Use this class as a base for virtual types declaration.
  */
 class DataProvider
@@ -52,13 +48,12 @@ class DataProvider
      *
      * @param int $customerId
      * @return array
+     * @throws Exception
      */
     public function getData(int $customerId): array
     {
         $buttonData = [
-            'on_click' => 'window.lacConfirmationPopup("'
-                . $this->escaper->escapeHtml($this->escaper->escapeJs($this->getLoginUrl($customerId)))
-                . '")',
+            'on_click' => sprintf("location.href = '%s';", $this->getLoginUrl($customerId)),
         ];
 
         return array_merge_recursive($buttonData, $this->data);

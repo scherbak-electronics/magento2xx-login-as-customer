@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * Copyright © Scherbak Electronics.
+ * See no license details.
  */
 -->
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <settings>
         <buttons>
-            <button name="login_as_customer"
-                    class="Magento\LoginAsCustomerAdminUi\Ui\Customer\Component\Control\LoginAsCustomerButton"/>
+            <button name="login_as_customer" class="Shch\Lasc\Ui\Customer\Component\Control\LoginAsCustomerButton"/>
         </buttons>
     </settings>
 </form>
