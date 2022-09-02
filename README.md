@@ -10,7 +10,8 @@ cd app/code && mkdir Shch && cd Shch && mkdir Lasc
 ```
 <br>
 2. Copy module to app/code/Shch/Lasc
-3. Run CLI commands:
+3. Run CLI commands
+
 ```
 bin/magento cache:clean && bin/magento setup:upgrade && bin/magento setup:di:compile
 ```
